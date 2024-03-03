@@ -1,7 +1,7 @@
 import express from "express";
 import userController from "../controllers/user.controller.js";
 import verifyIdParam from "../middlewares/idverifier.mw.js";
-import validateUser from "../Validation/user.validator.js";
+import validateUser from "../validator/user.validator.js";
 
 const router = express.Router();
 
@@ -11,5 +11,6 @@ router.post('/', validateUser, userController.createUser);
 router.put('/:id', verifyIdParam("user"), validateUser, userController.updateUser);
 router.put('/update_access/:id', verifyIdParam("user"), userController.updateAccess);
 router.delete('/:id', verifyIdParam("user"), userController.deleteUser);
+router.post('/profile-upload/:id', verifyIdParam("user"), userController.profileUpload);
 
 export default router;
