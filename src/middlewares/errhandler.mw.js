@@ -1,5 +1,5 @@
 import logger from "../../config/logger.config.js";
-import CustomError from "../Utils/customError.js";
+import CustomError from "../utils/customError.js";
 
 const errorHandler = async (err, req, res, next) => {
     logger.error(err);

@@ -1,5 +1,5 @@
 import logger from "../../config/logger.config.js";
-import asyncHandler from "../Utils/asyncHandler.js";
+import asyncHandler from "../utils/asyncHandler.js";
 import authService from "../services/auth.service.js";
 
 class AuthController {

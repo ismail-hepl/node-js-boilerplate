@@ -1,7 +1,7 @@
 import { body } from 'express-validator';
-import handleValidationErrors from "../Utils/handleValidationErrors.js";
+import handleValidationErrors from "../utils/handleValidationErrors.js";
 import User from '../models/user.model.js';
-import hashPassword from '../Utils/hashPassword.js';
+import hashPassword from '../utils/hashPassword.js';
 
 // Common validation rules for name, username, and email
 const commonValidationRules = [

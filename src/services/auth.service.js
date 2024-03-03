@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
-import CustomError from "../Utils/customError.js";
-import generateJwtToken from "../Utils/generateJwtToken.js";
+import CustomError from "../utils/customError.js";
+import generateJwtToken from "../utils/generateJwtToken.js";
 import userRepository from "../repositories/user.repository.js";
 
 class AuthService {

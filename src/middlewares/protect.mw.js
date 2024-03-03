@@ -1,7 +1,7 @@
-import asyncHandler from "../Utils/asyncHandler.js";
+import asyncHandler from "../utils/asyncHandler.js";
 import jwt from "jsonwebtoken";
 import userService from "../services/user.service.js";
-import CustomError from "../Utils/customError.js";
+import CustomError from "../utils/customError.js";
 import config from "../../config/config.js";
 
 const protect = asyncHandler(async (req, res, next) => {
