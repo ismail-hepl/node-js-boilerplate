@@ -25,6 +25,9 @@ const UserSchema = new mongoose.Schema(
         hasAccess: {
             type: Boolean,
             default: true
+        },
+        profilePicture: {
+            type: String
         }
     },
     { timestamps: true }
