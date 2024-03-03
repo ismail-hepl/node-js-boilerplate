@@ -1,5 +1,5 @@
 import userService from "../services/user.service.js";
-import asyncHandler from "../Utils/asyncHandler.js";
+import asyncHandler from "../utils/asyncHandler.js";
 import logger from "../../config/logger.config.js";
 
 class UserController {
@@ -53,6 +53,15 @@ class UserController {
 
         logger.info("User deleted successfully");
         res.status(200).json({ status: true, message: "User deleted successfully" });
+    });
+
+    profileUpload = asyncHandler(async (req, res, next) => {
+        const id = req.params.id;
+        logger.info(`upadting profile picture for the user: ${id}...`);
+        await userService.profileUpload(id, req);
+
+        logger.info("Profile picture updated successfully")
+        res.status(200).json({ status: true, message: "Profile picture updated successfully" });
     });
 }
 
