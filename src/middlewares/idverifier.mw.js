@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import CustomError from "../Utils/customError.js";
+import CustomError from "../utils/customError.js";
 
 const verifyIdParam = (name) => (req, res, next) => {
     if(req.route && req.route.path.includes(":id")) {
